@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 style="text-align:center">Фотографии книги и фильма</h1>
+    {% for item in pics %}
+        <p style="text-align:center"><img src={{item}} width="820" height="576"></p>
+    {% endfor %}
+{% endblock %}

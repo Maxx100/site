@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if current_user.is_authenticated %}
+        <h1>Здесь вы можете скачать книгу</h1>
+        <button ng-show='downloadReportview' data-toggle="modal">
+        <a href="http://127.0.0.1:8080/static/data/ready-player-one.txt{{costDataReportName}}"  download>Download txt file</a>
+        </button>
+        <button ng-show='downloadReportview' data-toggle="modal">
+            <a href="http://127.0.0.1:8080/static/data/ready-player-one.fb2{{costDataReportName}}"  download>Download fb2 file</a>
+        </button>
+        <button ng-show='downloadReportview' data-toggle="modal">
+            <a href="http://127.0.0.1:8080/static/data/ready-player-one.rtf{{costDataReportName}}"  download>Download rtf file</a>
+      </button>
+{% else %}
+<h1>Вы не авторизованы</h1>
+{% endif %}
+{% endblock %}
